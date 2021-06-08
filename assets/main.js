@@ -31,15 +31,13 @@ const readShelfDisplay = document.getElementById("completeBookshelfList");
 const updateReadShelf = () => {
    if (readShelf.length > 0) {
       readShelfDisplay.innerHTML = readShelf.map((book) => {
-         return `     <article class="book_item">
-                  <h3>${book.title}</h3>
-                  <p>Penulis: ${book.author}</p>
-                  <p>Tahun: ${book.year}</p>
-                  <div class="action">
-                     <button class="green" onclick="moveToUnreadShelf(event)">Belum Selesai dibaca</button>
-                     <button class="red">Hapus buku</button>
-                  </div>
-               </article>`;
+         return `    <article class="book_item">
+                        <h3>${book.title}</h3>
+                        <p>Penulis: ${book.author}</p>
+                        <p>Tahun: ${book.year}</p>
+                        <button class="green" onclick="moveToUnreadShelf()">Belum Selesai dibaca</button>
+                        <button class="red">Hapus buku</button>
+                     </article>`;
       });
    }
    return;
@@ -51,27 +49,22 @@ const updateUnreadShelf = () => {
    if (unreadShelf.length > 0) {
       unReadShelfDisplay.innerHTML = unreadShelf.map((book) => {
          return `     <article class="book_item">
-                  <h3>${book.title}</h3>
-                  <p>Penulis: ${book.author}</p>
-                  <p>Tahun: ${book.year}</p>
-                  <div class="action">
-                     <button class="green">Selesai dibaca</button>
-                     <button class="red">Hapus buku</button>
-                  </div>
-               </article>`;
+                        <h3>${book.title}</h3>
+                        <p>Penulis: ${book.author}</p>
+                        <p>Tahun: ${book.year}</p>
+                        <button class="green" onclick="moveToUnreadShelf()>Selesai dibaca</button>
+                        <button class="red">Hapus buku</button>
+                      </article>`;
       });
    }
    return;
 };
 
 const moveToUnreadShelf = () => {
-   const books = document.querySelectorAll(".book_list");
-   console.log(books);
-   books.forEach(function (book) {
-      book.addEventListener("click", checkIndex);
-   });
+   const book = document.getElementsByClassName('book_list');
+   function index(el) {
+      return [...el.parentElement.children].indexOf(el);
+    }
+    let index = index(element);
 
-   function checkIndex(event) {
-      console.log(Array.from(books).indexOf(event.target));
-   }
 };
