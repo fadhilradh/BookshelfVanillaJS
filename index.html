@@ -8,9 +8,12 @@
       />
       <meta http-equiv="X-UA-Compatible" content="ie=edge" />
       <title>Bookshelf Apps</title>
-      <link rel="preconnect" href="https://fonts.gstatic.com">
-      <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
-      
+      <link rel="preconnect" href="https://fonts.gstatic.com" />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap"
+         rel="stylesheet"
+      />
+
       <link rel="stylesheet" href="style.css" />
    </head>
    <body>
@@ -20,18 +23,33 @@
       <main>
          <section class="input_section">
             <p>Masukkan Buku Baru</p>
-            <form id="inputBook" onsubmit="addToShelf(); return false">
+            <form id="inputBook">
                <div class="input">
                   <label for="inputBookTitle">Judul</label>
-                  <input id="inputBookTitle" class="input-form" type="text" required />
+                  <input
+                     id="inputBookTitle"
+                     class="input-form"
+                     type="text"
+                     required
+                  />
                </div>
                <div class="input">
                   <label for="inputBookAuthor">Penulis</label>
-                  <input id="inputBookAuthor" class="input-form" type="text" required />
+                  <input
+                     id="inputBookAuthor"
+                     class="input-form"
+                     type="text"
+                     required
+                  />
                </div>
                <div class="input">
                   <label for="inputBookYear">Tahun</label>
-                  <input id="inputBookYear" class="input-form" type="number" required />
+                  <input
+                     id="inputBookYear"
+                     class="input-form"
+                     type="number"
+                     required
+                  />
                </div>
                <div class="input_inline">
                   <label for="inputBookIsComplete">Selesai dibaca</label>
@@ -55,18 +73,20 @@
          <section class="book_shelf">
             <h2>Belum selesai dibaca</h2>
 
-            <div id="incompleteBookshelfList" class="book_list"></div>
+            <div
+               id="incompleteBookshelfList"
+               class="incomplete_book_list"
+            ></div>
          </section>
 
          <section class="book_shelf">
             <h2>Selesai dibaca</h2>
 
-            <div id="completeBookshelfList" class="book_list">
-               
-            </div>
+            <div id="completeBookshelfList" class="compeleted_book_list"></div>
          </section>
       </main>
 
-      <script src="assets/main.js"></script>
+      <script src="assets/script.js"></script>
+      <script src="assets/storage.js"></script>
    </body>
 </html>

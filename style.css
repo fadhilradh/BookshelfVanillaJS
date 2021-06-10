@@ -20,7 +20,7 @@ button {
    display: flex;
    align-items: center;
    justify-content: center;
-   background-color: #2757CC;
+   background-color: #2757cc;
    color: white;
 }
 
@@ -40,8 +40,9 @@ main {
    display: flex;
    flex-direction: column;
    padding: 16px;
-   background: #F8F9FA;
-   box-shadow: -3px 4px 20px -2px rgba(189, 189, 189, 0.57);   border-radius: 10px;
+   background: #f8f9fa;
+   box-shadow: -3px 4px 20px -2px rgba(189, 189, 189, 0.57);
+   border-radius: 10px;
 }
 
 .input_section > p {
@@ -54,27 +55,27 @@ main {
 }
 
 .input-form {
-   background: #EEF5FE;
+   background: #eef5fe;
    height: 50px;
-   border: solid 1px #2757CC;
+   border: solid 1px #2757cc;
 }
 
 .input-form:hover {
-   background: #EEF5FE;
+   background: #eef5fe;
    height: 50px;
    border: solid 1px #3d02df;
 }
 
 .input-form:focus {
-   background: #EEF5FE;
+   background: #eef5fe;
    height: 50px;
    border: solid 1px #3d02df;
 }
 
 .input_section > form > button {
    background-color: white;
-   color: #2757CC;
-   border: solid 1px #2757CC;
+   color: #2757cc;
+   border: solid 1px #2757cc;
    border-radius: 5px;
    display: block;
    width: 100%;
@@ -84,7 +85,7 @@ main {
 }
 
 #bookSubmit:hover {
-   background-color: #2757CC;
+   background-color: #2757cc;
    color: white;
 }
 
@@ -106,7 +107,6 @@ main {
 }
 
 .input_section > form > .input_inline > label {
-
    margin-right: 10px;
 }
 
@@ -116,8 +116,8 @@ main {
    flex-direction: column;
    align-items: center;
    padding: 16px;
-   background: #F8F9FA;
-   box-shadow: -3px 4px 20px -2px rgba(189, 189, 189, 0.57);   
+   background: #f8f9fa;
+   box-shadow: -3px 4px 20px -2px rgba(189, 189, 189, 0.57);
    border-radius: 10px;
 }
 
@@ -145,15 +145,15 @@ main {
 
 .search_section > form > button {
    background-color: white;
-   color: #2757CC;
-   border: solid 1px #2757CC;
+   color: #2757cc;
+   border: solid 1px #2757cc;
    border-radius: 5px;
    cursor: pointer;
    padding: 10px;
 }
 
 #searchSubmit:hover {
-   background-color: #2757CC;
+   background-color: #2757cc;
    color: white;
    border: 0;
    border-radius: 5px;
@@ -161,15 +161,15 @@ main {
 }
 
 #searchBookTitle {
-   background: #EEF5FE;
+   background: #eef5fe;
    height: 50px;
-   border: solid 1px #2757CC;
+   border: solid 1px #2757cc;
 }
 
 .book_shelf {
    margin: 16px 0 0 0;
-   background: #F8F9FA;
-box-shadow: -3px 4px 20px -2px rgba(189, 189, 189, 0.57);
+   background: #f8f9fa;
+   box-shadow: -3px 4px 20px -2px rgba(189, 189, 189, 0.57);
 
    padding: 16px;
    border-radius: 10px;
@@ -179,24 +179,28 @@ box-shadow: -3px 4px 20px -2px rgba(189, 189, 189, 0.57);
    font-weight: normal;
 }
 
-.book_shelf > .book_list {
+.book_shelf > .incomplete_book_list,
+.complete_book_list {
    padding: 16px;
 }
 
-.book_shelf > .book_list > .book_item {
+.book_shelf > .incomplete_book_list,
+.complete_book_list > .book_item {
    padding: 8px 16px 16px 16px;
-   background: #F8F9FA;
+   background: #f8f9fa;
    box-shadow: -3px 4px 20px -2px rgba(189, 189, 189, 0.57);
    border-radius: 5px;
    margin: 10px 0;
 }
 
-.book_shelf > .book_list > .book_item > h3,
+.book_shelf > .incomplete_book_list,
+.complete_book_list > .book_item > h3,
 p {
    margin: 8px 0;
 }
 
-.book_shelf > .book_list > .book_item > button {
+.book_shelf > .complete_book_list,
+.incomplete_book_list > .book_item > button {
    padding: 10px;
    margin: 0 5px 0 0;
    border-radius: 5px;
@@ -217,10 +221,10 @@ p {
 .red {
    background-color: white;
    color: darkred;
-   border: solid 1px darkred
+   border: solid 1px darkred;
 }
 
 .red:hover {
    background-color: darkred;
-   color: white
+   color: white;
 }
